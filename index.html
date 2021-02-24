@@ -27,6 +27,38 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+<style>
+    .rsvp .rsvp-form .form-input-group label:after {
+        content: "";
+        height: 30px;
+        width: 1px;
+        border-right: solid 1px #E6E9EA;
+        position: absolute;
+        top: 50%;
+        left: 255px;
+        transform: translateY(-50%);
+    }
+
+    .rsvp .rsvp-form .form-input-group label {
+        text-align: left;
+        position: absolute;
+        display: inline-block;
+        margin-left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .rsvp .rsvp-form .form-input-group select {
+        margin-left: 295px;
+        width: 250px;
+        height: 100%;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: none;
+    }
+
+</style>
 <body id="top">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
@@ -36,6 +68,7 @@
     <section class="navigation">
         <header>
             <div class="header-content">
+                <div class="logo"><a href="#"><img src="img/logo.png" style="height: 96px;" alt="Logo"></a></div>
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
@@ -234,18 +267,11 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Ko Laukiate?</h3>
-                <p>Maloniai prašome savo atsakymą užregistruoti iki Balandžio 1 dienos.</p>
+                <p>Maloniai prašome savo atsakymą užregistruoti iki Gegužės 1 dienos.</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Jūsų el. pašto adresas"
-                                                                     required>
-                            </div>
-                        </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
@@ -253,22 +279,47 @@
                                                                  required>
                             </div>
                         </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="surname" class=""
+                                                                 placeholder="Jūsų pavardė"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group" style="width: 555px;">
+                                <label for="attendance">Ar dalyvausite mūsų šventėje?</label>
+                                <select name="attendance">
+                                    <option value="Dalyvausiu">Dalyvausiu</option>
+                                    <option value="Dalyvauti negalėsiu">Dalyvauti negalėsiu</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Plius"
-                                                                  required>
+                                <i class="fa fa-user"></i><input name="name1" class=""
+                                                                 placeholder="Jūsų vardas">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Pakvietimo Numeris"
-                                                                required>
+                                <i class="fa fa-user"></i><input name="surname2" class=""
+                                                                 placeholder="Jūsų pavardė">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group" style="width: 555px;">
+                                <label for="attendance2">Ar dalyvausite mūsų šventėje?</label>
+                                <select name="attendance2">
+                                    <option value="Dalyvausiu">Dalyvausiu</option>
+                                    <option value="Dalyvauti negalėsiu">Dalyvauti negalėsiu</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -276,7 +327,7 @@
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Taip, tai aš!
+                        Siųsti
                     </button>
                 </form>
             </div>
