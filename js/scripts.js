@@ -214,27 +214,21 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Luktelkite!</strong> Saugome jūsų informaciją.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Atsiprašome!</strong> Jūsų pakvietimo numeris neteisingas.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbxzHe_aiFu4oZslgymb4Kpbk27i1D6yxdGF3PC9AX47TONsOdRuJv-V/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
-                    } else {
-                        $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
-                    }
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Atsiprašome!</strong> Iškilo techninių kliučių. '));
-                });
-        }
+        $.post('https://script.google.com/macros/s/AKfycbxug1hPf-eJL1SG-PTtmSe3pnJwA3qA_1ZXDzQrFqCr-hZxOc4/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Atsiprašome!</strong> Iškilo techninių kliučių. '));
+            });
     });
-
 });
 
 /********************** Extras **********************/
