@@ -247,11 +247,6 @@ function initMap() {
         center: location,
         scrollwheel: false
     });
-
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
 }
 
 function initBBSRMap() {
@@ -260,11 +255,6 @@ function initBBSRMap() {
         zoom: 15,
         center: la_fiesta,
         scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
     });
 }
 
