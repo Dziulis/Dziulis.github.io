@@ -28,7 +28,7 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <style>
-    .rsvp .rsvp-form .form-input-group label:after {
+    /* .rsvp .rsvp-form .form-input-group label:after {
         content: "";
         height: 30px;
         width: 1px;
@@ -37,7 +37,7 @@
         top: 50%;
         left: 230px;
         transform: translateY(-50%);
-    }
+    } */
 
     .rsvp .rsvp-form .form-input-group label {
         text-align: left;
@@ -49,14 +49,24 @@
     }
     
     .rsvp .rsvp-form .form-input-group select {
-        margin-left: 265px;
-        width: 245px;
+        padding-left: 10px;
+        width: 100%;
         height: 100%;
         -moz-border-radius: 6px;
         -webkit-border-radius: 6px;
         border-radius: 6px;
         border: none;
     }
+
+    /* .rsvp .rsvp-form .form-input-group p {
+        padding-left: 10px;
+        width: 100%;
+        height: 100%;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: none;
+    } */
 
 </style>
 <body id="top">
@@ -286,10 +296,14 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin: 10px" class="row">
+                    <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group" style="width: 515px;">
+                            <div class="form-input-group">
                                 <label for="attendance">Ar dalyvausite mūsų šventėje?</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
                                 <select name="attendance">
                                     <option value="Dalyvausiu">Dalyvausiu</option>
                                     <option value="Dalyvauti negalėsiu">Dalyvauti negalėsiu</option>
@@ -311,10 +325,14 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin: 10px" class="row">
+                    <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group" style="width: 515px;">
+                            <div class="form-input-group">
                                 <label for="attendance2">Ar dalyvausite mūsų šventėje?</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
                                 <select name="attendance2">
                                     <option value="Dalyvausiu">Dalyvausiu</option>
                                     <option value="Dalyvauti negalėsiu">Dalyvauti negalėsiu</option>
