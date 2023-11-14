@@ -1,3 +1,3 @@
 exports.printMsg = function() {
-    console.log("Visit https://siruciaitobe.lt !");
+    console.log("Visit https://dziulis.github.io !");
 };
